@@ -116,7 +116,7 @@ public class QuestionarioController {
 		
 		// espec-texto54
 		ModelAndView mv = new ModelAndView("sucesso");
-		mv.addObject("mensagem", "Question·rio gravado com sucesso");
+		mv.addObject("mensagem", "Question√°rio gravado com sucesso");
 		return mv;
 	}
 }
