@@ -1,4 +1,4 @@
-package cpb.cursos.model;
+package edu.fatec.questionario.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,17 +15,12 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class Questionario {
-	
+public class SecaoDTO {
 	private long id;
-	private Contato contato = new Contato();
 	
-	private List<Resposta> respostas = new ArrayList<>();
+	private long indice;
 	
+	private String texto = "";
 	
-	public Questionario(List<Pergunta> perguntas) { 
-		for (Pergunta p : perguntas) {
-			respostas.add(new Resposta());
-		}
-	}
+	private List<Elemento> respostas = new ArrayList<>();
 }

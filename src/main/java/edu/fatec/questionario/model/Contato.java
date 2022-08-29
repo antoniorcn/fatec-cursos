@@ -1,4 +1,4 @@
-package cpb.cursos.model;
+package edu.fatec.questionario.model;
 
 import java.time.LocalDateTime;
 import javax.persistence.Column;
@@ -15,7 +15,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "contatos")
+@Table(name = "contato")
 @Getter @Setter 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -27,25 +27,25 @@ public class Contato {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long id;
 	
-	@Column(length=100)
+	@Column(length=150)
 	private String nome = "";
 	
-	@Column(length=100)
+	@Column(length=150)
 	private String email = "";
 	
-	@Column(length=30)
+	@Column(length=100)
 	private String telefone = "";
 	
-	@Column(name = "tel_tipo", length=15)
+	@Column(name = "tel_tipo", length=30)
 	private String telTipo = "";
 	
-	@Column(length=100)
+	@Column(length=150)
 	private String endereco = "";
 	
-	@Column(length=30)
+	@Column(length=50)
 	private String bairro = "";
 
-	@Column(length=30)
+	@Column(length=50)
 	private String cidade = "";
 	
 	@Column(length=2)
@@ -54,7 +54,7 @@ public class Contato {
 	@Column(length=9)
 	private String cep = "";
 	
-	@Column(length=30)
+	@Column(length=50)
 	private String escolaridade = "";
 	
 	@Column(name="ultima_instituicao", length=100)

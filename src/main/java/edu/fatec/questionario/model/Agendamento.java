@@ -1,4 +1,4 @@
-package cpb.cursos.model;
+package edu.fatec.questionario.model;
 
 import java.time.LocalDateTime;
 
@@ -19,42 +19,25 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name = "perguntas")
+@Table(name = "agendamento")
 @Getter @Setter 
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class Pergunta {
+public class Agendamento {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long id;
 	
-	@Column
-	private long indice;
-	
-	@Column(length=30)
-	private String texto = "";
-	
-	@Column(length=30)
-	private String valor = "";
-	
-	@Column(length=255)
-	private String descricao = "";
-	
-	@Column(name = "espec_precisa")
-	private boolean especialistaPrecisa;
-	
-	@Column(name = "espec_texto", length=100)
-	private String especialistaTexto;
-	
-	@Column(name = "espec_variable", length=30)
-	private String especialistaVariable;
-	
 	@ManyToOne
-	@JoinColumn(name = "categoria_id")
-	private Categoria categoria;
-
+	@JoinColumn(name = "contato_id")
+	private Contato contato;
+		
+	@Column(length=50)
+	private String horario;
+	
 	@Column(name="criado_em")	
 	private LocalDateTime criadoEm = LocalDateTime.now();
 }

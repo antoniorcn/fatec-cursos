@@ -131,7 +131,7 @@ iframe {
 .contact1 {
   width: 100%;
   min-height: 100%;
-  padding: 15px;
+  padding: 0.5rem;
 
   background: #009bff;
   background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
@@ -150,9 +150,9 @@ iframe {
 }
 
 .container-contact1 {
-  width: 1163px;
+  width: 100%;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 0.5rem;
   overflow: hidden;
 
   display: -webkit-box;
@@ -160,17 +160,19 @@ iframe {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-
-  padding: 90px 130px 88px 148px;
+  align-items: flex-start;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
 }
 
 /*------------------------------------------------------------------
 [  ]*/
 .contact1-pic {
-  width: 296px;
+  width: 10rem;
 }
 
 .contact1-pic img {
@@ -181,7 +183,7 @@ iframe {
 /*------------------------------------------------------------------
 [  ]*/
 .contact1-form {
-  width: 390px;
+  width: 100%;
 }
 
 .contact1-form-title {
@@ -189,45 +191,44 @@ iframe {
   font-family: Montserrat-ExtraBold;
   font-size: 24px;
   color: #333333;
-  line-height: 1.2;
-  text-align: center;
-  padding-bottom: 44px;
+  text-align: justify;
+  padding-bottom: 1rem;
 }
 
 input.input1 {
-  height: 50px;
-  border-radius: 25px;
-  padding: 0 30px;
+  height: 3rem;
+  border-radius: 1rem;
+  padding: 0 0.5rem;
 }
 
 input.input1 + .shadow-input1 {
-  border-radius: 25px;
+  border-radius: 1rem;
 }
 
 textarea.input1 {
-  min-height: 150px;
-  border-radius: 25px;
-  padding: 12px 30px;
+  min-height: 10rem;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
 }
 textarea.input1 + .shadow-input1 {
-  border-radius: 25px;
+  border-radius: 1rem;
 }
 
 select.input1 {
-  height: 50px;
-  border-radius: 25px;
-  padding: 0 30px;
+  height: 3rem;
+  border-radius: 1rem;
+  padding: 0 1rem;
   border-width: 0;
 }
 select.input1 + .shadow-input1 {
-  border-radius: 25px;
+  border-radius: 1rem;
 }
 
 .radio-container {
   display: block;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
   cursor: pointer;
   font-size: 18px;
   -webkit-user-select: none;
@@ -250,8 +251,8 @@ select.input1 + .shadow-input1 {
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 1rem;
+  width: 1rem;
   background-color: #eee;
   border-radius: 50%;
 }
@@ -280,10 +281,10 @@ select.input1 + .shadow-input1 {
 
 /* Style the indicator (dot/circle) */
 .radio-container .radiomark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
+  top: 0.25rem;
+  left: 0.25rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 50%;
   background: white;
 }
@@ -293,8 +294,8 @@ select.input1 + .shadow-input1 {
 .check-container {
   display: block;
   position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
   cursor: pointer;
   font-size: 18px;
   -webkit-user-select: none;
@@ -316,8 +317,8 @@ select.input1 + .shadow-input1 {
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 1rem;
+  width: 1rem;
   background-color: #eee;
 }
 
@@ -345,12 +346,12 @@ select.input1 + .shadow-input1 {
 
 /* Style the checkmark/indicator */
 .check-container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
+  left: 0.25rem;
+  top: 0.25rem;
+  width: 0.5rem;
+  height: 0.5rem;
   border: solid white;
-  border-width: 0 3px 3px 0;
+  border-width: 0 0.1rem 0.1rem 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -367,13 +368,13 @@ select.input1 + .shadow-input1 {
 /* Tooltip text */
 .my-tooltip .my-tooltiptext {
   visibility: hidden;
-  width: 360px;
+  width: 20rem;
   background-color: black;
   color: #fff;
   text-align: center;
-  padding: 5px;
-  border-radius: 6px;
-  top: -5px;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  top: -0.3rem;
   left: 50%; 
 
   /* Position the tooltip text - see examples below! */
@@ -391,8 +392,8 @@ select.input1 + .shadow-input1 {
   position: absolute;
   top: 10%;
   right: 100%; /* To the left of the tooltip */
-  margin-top: -5px;
-  border-width: 5px;
+  margin-top: -0.3rem;
+  border-width: 0.3rem;
   border-style: solid;
   border-color: transparent black transparent transparent;
 }
@@ -403,7 +404,7 @@ select.input1 + .shadow-input1 {
   position: relative;
   width: 100%;
   z-index: 1;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .input1 {
@@ -412,7 +413,16 @@ select.input1 + .shadow-input1 {
   background: #e6e6e6;
   font-family: Montserrat-Bold;
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 0.1rem;
+  color: #666666;
+}
+
+.area-input1 {
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  font-family: Montserrat-Bold;
+  font-size: 15px;
   color: #666666;
 }
 
@@ -436,14 +446,14 @@ select.input1 + .shadow-input1 {
 
 @-webkit-keyframes anim-shadow {
   to {
-    box-shadow: 0px 0px 80px 30px;
+    box-shadow: 0px 0px 3.5rem 1rem;
     opacity: 0;
   }
 }
 
 @keyframes anim-shadow {
   to {
-    box-shadow: 0px 0px 80px 30px;
+    box-shadow: 0px 0px 3.5rem 1rem;
     opacity: 0;
   }
 }
@@ -460,13 +470,13 @@ select.input1 + .shadow-input1 {
 }
 
 .contact1-form-btn {
-  min-width: 193px;
-  height: 50px;
-  border-radius: 25px;
+  min-width: 6rem;
+  height: 2rem;
+  border-radius: 1rem;
   background: #57b846;
   font-family: Montserrat-Bold;
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 0.1rem;
   color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -475,7 +485,7 @@ select.input1 + .shadow-input1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 25px;
+  padding: 0 1rem;
 
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -484,7 +494,7 @@ select.input1 + .shadow-input1 {
 }
 
 .contact1-form-btn i {
-  margin-left: 7px;
+  margin-left: 0.5rem;
 
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -497,11 +507,11 @@ select.input1 + .shadow-input1 {
 }
 
 .contact1-form-btn:hover i {
-  -webkit-transform: translateX(10px);
-  -moz-transform: translateX(10px);
-  -ms-transform: translateX(10px);
-  -o-transform: translateX(10px);
-  transform: translateX(10px);
+  -webkit-transform: translateX(0.5rem);
+  -moz-transform: translateX(0.5rem);
+  -ms-transform: translateX(0.5rem);
+  -o-transform: translateX(0.5rem);
+  transform: translateX(0.5rem);
 }
 
 
@@ -568,15 +578,15 @@ select.input1 + .shadow-input1 {
   max-width: 70%;
   background-color: white;
   border: 1px solid #c80000;
-  border-radius: 13px;
-  padding: 4px 25px 4px 10px;
+  border-radius: 0.5rem;
+  padding: 0.2rem 1rem 0.2rem 0.5rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: 8px;
+  right: 0.5rem;
   pointer-events: none;
 
   font-family: Montserrat-Medium;
@@ -607,7 +617,7 @@ select.input1 + .shadow-input1 {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: 13px;
+  right: 0.5rem;
 }
 
 .alert-validate:hover:before {
@@ -625,9 +635,9 @@ select.input1 + .shadow-input1 {
  /* Style buttons */
  .btn {
   background-color: DodgerBlue; /* Blue background */
-  border-radius: 25px;
+  border-radius: 1rem;
   color: white; /* White text */
-  padding: 12px 16px; /* Some padding */
+  padding: 0.5rem 0.5rem; /* Some padding */
   font-size: 16px; /* Set a font size */
   cursor: pointer; /* Mouse pointer on hover */
 }
@@ -635,4 +645,49 @@ select.input1 + .shadow-input1 {
 /* Darker background on mouse-over */
 .btn:hover {
   background-color: RoyalBlue;
-} 
+}
+
+
+
+/* ===================================================================================== */
+.secao {
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    margin-top: 1rem;
+    border-width: .2rem;
+    background-color: #fff;
+
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.secao-titulo {
+  display: block;
+  font-family: Montserrat-ExtraBold;
+  font-size: 32px;
+  color: #333333;
+  text-align: justify;
+  padding-bottom: 1rem;
+}
+
+
+.selecao-badge-quantity {
+
+}
+
+
+.nao-pergunta {
+    display: block;
+    font-family: Arial;
+    font-size: 24px;
+    color: #333333;
+    text-align: justify;
+    padding-bottom: 1rem;
+    }
+/* ==================================================================================== */

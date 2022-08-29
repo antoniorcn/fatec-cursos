@@ -74,22 +74,22 @@
 					$error = 1;
 				}
 
-				// Verifica as respostas das perguntas e adiciona-as no banco de dados;
-				$sql = "SELECT * FROM perguntas";
+				// Verifica as respostas das elementos e adiciona-as no banco de dados;
+				$sql = "SELECT * FROM elementos";
 				$stmt = $db->prepare($sql);
 				$stmt->execute();
 				$result = $stmt->rowCount();
 				forEach( $stmt as $row ) {
 					$key = in_array($row['valor'], $areas);
-					//echo "Analisando pergunta : " . $row['id'] . " - " . $row['valor'] . " Localizado: $key <br/>";
+					//echo "Analisando elemento : " . $row['id'] . " - " . $row['valor'] . " Localizado: $key <br/>";
 					
 					if ( $key == true ) { 
 						$pergunta_id = $row['id'];
 						$pergunta_espec = default_value($row['espec_variable'], "");
-						$sql = "INSERT INTO respostas (id, contato_id, pergunta_id, pergunta_espec) VALUES (0, :contato, :pergunta, :pergunta_espec)";
+						$sql = "INSERT INTO respostas (id, contato_id, pergunta_id, pergunta_espec) VALUES (0, :contato, :elemento, :pergunta_espec)";
 						$stmt = $db->prepare($sql);
 						$stmt->bindValue(':contato', $contato_id, PDO::PARAM_INT);
-						$stmt->bindValue(':pergunta', $pergunta_id, PDO::PARAM_INT);
+						$stmt->bindValue(':elemento', $pergunta_id, PDO::PARAM_INT);
 						$stmt->bindValue(':pergunta_espec', $pergunta_espec, PDO::PARAM_STR);
 						$stmt->execute();
 						$result = $stmt->rowCount();
